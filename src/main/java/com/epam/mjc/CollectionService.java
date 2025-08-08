@@ -2,17 +2,18 @@ package com.epam.mjc;
 
 import java.util.List;
 import java.util.Optional;
-//import java.util.stream.Stream;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class CollectionService {
 
     public List<Integer> filterEvenNumbers(List<Integer> list) {
-       return list.stream().filter(t -> t % 2 == 0).toList();
+       return list.stream().filter(t -> t % 2 == 0).collect(Collectors.toList());
         // throw new UnsupportedOperationException("You should implement this method.");
     }
 
     public List<String> toUpperCaseCollection(List<String> list) {
-       return list.stream().map(x -> x.toUpperCase()).toList();
+       return list.stream().map(x -> x.toUpperCase()).collect(Collectors.toList());
         // throw new UnsupportedOperationException("You should implement this method.");
     }
 
